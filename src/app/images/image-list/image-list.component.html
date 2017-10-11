@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-5">
+    <h2>Images</h2>
+    <ul class="list-group">
+      <li class="list-group-item"
+        *ngFor="let image of images"
+        (click)="selectImage(image)"
+        [class.active]="iage === selectedImage">
+        {{image.description}}
+      </li>
+    </ul>
+    <button class="btn btn-warning" (click)="createNewImage()">New</button>
+  </div>
+  <div class="col-md-5 col-md-offset-2">
+    <app-image-details
+      [image]="selectedImage"
+      [createHandler]="addImage"
+      [updateHandler]="updateImage"
+      [deleteHandler]="deleteImage">
+    </app-image-details>
+  </div>
+</div>
