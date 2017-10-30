@@ -33,7 +33,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || 'mongodb://kertsikoo:imag
   });
 });
 
-// IMAGESS API ROUTES BELOW
+// IMAGES API ROUTES BELOW
 
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code) {
@@ -58,8 +58,8 @@ app.post("/api/images", function(req,res){
     var newImage = req.body;
     newImage.createDate = new Date();
 
-      if (!req.body.name) {
-        handleError(res, "Invalid user input", "Must provide a name.", 400);
+      if (!req.body.description) {
+        handleError(res, "Invalid user input", "Must provide a description.", 400);
       }
     
       db.collection(IMAGES_COLLECTION).insertOne(newImage, function(err, doc) {

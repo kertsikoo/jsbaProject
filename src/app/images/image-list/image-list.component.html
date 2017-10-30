@@ -5,7 +5,7 @@
       <li class="list-group-item"
         *ngFor="let image of images"
         (click)="selectImage(image)"
-        [class.active]="iage === selectedImage">
+        [class.active]="image === selectedImage">
         {{image.description}}
       </li>
     </ul>

@@ -21,11 +21,9 @@ export class ImageListComponent implements OnInit {
     this.imageService
     .getImages()
     .then((images: Image[])=> {
-      this.images = images.map((image)=> {
-        if (!image.other) {
-          image.other = ''
-        }
+      this.images = images.map((image)=>{
         return image;
+        
       });
     });
   }
