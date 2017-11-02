@@ -8,15 +8,15 @@
   <form class="col-md-12">
     <div class="form-group">
       <label for="image-description">Description</label>
-      <input class="form-control" name="image-description" [(ngModel)]="image.description" placeholder="Description"/>
+      <input class="form-control" name="image-description" [(ngModel)]="image.description" placeholder="Description" />
     </div>
     <div class="form-group">
       <label for="image-other">Email</label>
-      <input class="form-control" name="image-other" [(ngModel)]="image.other" placeholder="Other"/>
+      <input class="form-control" name="image-other" [(ngModel)]="image.other" placeholder="Other" />
     </div>
     <div class="form-group">
       <label for="image-image">IMAGE HERE</label>
-      <input class="form-control" name="image-image" [(ngModel)]="image.image" placeholder="=)"/>
+      <input class="form-control" name="image-image" [(ngModel)]="image.image" placeholder="=)" />
     </div>
   
     <button class="btn btn-primary" *ngIf="!image._id" (click)="createImage(image)">Create</button>

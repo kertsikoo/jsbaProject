@@ -44,8 +44,9 @@ export class ImageListComponent implements OnInit {
       image: '',
       other: ''
     };
+    
   
-   // By default, a newly-created image will have the selected state.
+   // By default, a newly-created image will have the selected status.
    this.selectImage(image);
   }
   deleteImage = (imageId: String) => {

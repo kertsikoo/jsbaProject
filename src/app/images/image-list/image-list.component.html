@@ -3,13 +3,13 @@
     <h2>Images</h2>
     <ul class="list-group">
       <li class="list-group-item"
-        *ngFor="let image of images"
+        *ngFor="let image of images" 
         (click)="selectImage(image)"
         [class.active]="image === selectedImage">
         {{image.description}}
       </li>
     </ul>
-    <button class="btn btn-warning" (click)="createNewImage()">New</button>
+    <button class="btn btn-warning" (click)="createNewImage()" >New</button>
   </div>
   <div class="col-md-5 col-md-offset-2">
     <app-image-details
